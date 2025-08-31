@@ -6,7 +6,7 @@ export default function Stepper({ step = 1 }) {
     "Approvals",
     "Talent Match",
     "Interviews & Offers",
-    "Onboarding",
+    "Onboarding"
   ];
   return (
     <div
@@ -14,7 +14,7 @@ export default function Stepper({ step = 1 }) {
         display: "flex",
         gap: 8,
         flexWrap: "wrap",
-        margin: "8px 0",
+        margin: "8px 0"
       }}
     >
       {items.map((t, i) => (
@@ -25,7 +25,7 @@ export default function Stepper({ step = 1 }) {
             border: "1px solid #e6e9ee",
             borderRadius: 12,
             background: i < step ? "#fff8f0" : "#fff",
-            borderColor: i < step ? "#b58d5b" : "#e6e9ee",
+            borderColor: i < step ? "#b58d5b" : "#e6e9ee"
           }}
         >
           {i + 1}. {t}
