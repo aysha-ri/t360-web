@@ -6,7 +6,8 @@ import Profiles from "./components/Profiles.jsx";
 import Offers from "./components/Offers.jsx";
 import Onboarding from "./components/Onboarding.jsx";
 
-// Use a single API constant with the correct env variable and a relative fallback
+// Use a single API constant with a relative fallback.
+// When VITE_API_URL is undefined (e.g., in Netlify), API calls will go to the same origin.
 const API = import.meta.env.VITE_API_URL || "";
 
 export default function App() {
