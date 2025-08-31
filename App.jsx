@@ -6,11 +6,13 @@ import Profiles from "./components/Profiles.jsx";
 import Offers from "./components/Offers.jsx";
 import Onboarding from "./components/Onboarding.jsx";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:4000";
+// Use a single API constant with the correct env variable and a relative fallback
+const API = import.meta.env.VITE_API_URL || "";
 
 export default function App() {
   const [jobId, setJobId] = useState(null);
   const [step, setStep] = useState(1);
+
   return (
     <div style={{ padding: "8px 0 22px" }}>
       <Stepper step={step} />
@@ -44,4 +46,5 @@ export default function App() {
         />
       </div>
     </div>
-const API = import.meta.env.VITE_API_URL || ""; // same-origin (Netlify redirects /api/* to the function)
+  );
+}
